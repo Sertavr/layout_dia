@@ -1,7 +1,13 @@
 @import 'utils';
 @import 'fonts';
 @import 'typography';
+@import './header/header';
+@import './button/button';
+@import './page/page';
+@import './main/main-content';
+
 
 body {
+  margin: 0;
   background: $c-gray;
 }

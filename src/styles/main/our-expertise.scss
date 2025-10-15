@@ -1,0 +1,104 @@
+.our-expertise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 72px;
+  background-color: $white-main-color;
+  border-radius: 30px;
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-block: 128px;
+    padding-inline: 139px;
+  }
+
+  @include on-small-desktop {
+    padding-inline: 54px;
+  }
+
+  @include on-desktop {
+    padding-inline: 227px;
+  }
+
+  @include on-large-screens {
+    padding-inline: 705px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+
+    @include on-tablet {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+
+    @include on-small-desktop {
+      flex-direction: row;
+      gap: 137px;
+    }
+
+    @include on-large-screens {
+      width: 1146px;
+      gap: 177px;
+    }
+  }
+
+  &__article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    width: 166px;
+    height: 166px;
+    border-radius: 16px;
+
+    &--branding {
+      background-image: url(../images/our-expertise-1.png);
+    }
+    &--communication {
+      background-image: url(../images/communicatuin-2.png);
+    }
+
+    &--strategy {
+      background-image: url(../images/strategy-3.png);
+    }
+  }
+
+  &__article-title {
+    margin: 0;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0;
+    text-align: center;
+    color: $dark-color-title;
+
+    @include on-small-desktop {
+      margin-top: 40px;
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0;
+    text-align: center;
+    color: $dark-color-text;
+  }
+}
