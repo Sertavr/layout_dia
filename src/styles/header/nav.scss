@@ -12,6 +12,15 @@
     @include on-small-desktop {
       flex-direction: row;
     }
+
+    &--footer {
+      padding-inline: 0;
+
+      @include on-tablet {
+        flex-direction: row;
+        gap: 40px;
+      }
+    }
   }
 
   &__link {
@@ -32,16 +41,23 @@
       position: absolute;
       bottom: -5px;
       width: 100%;
-      height: 1px;
+      height: 2px;
       transform: scale(0);
-      background-color: $white-main-color;
-      transition: transform $transition;
+      background-color: $dark-blue;
+      transition: all $transition;
       transform-origin: left;
     }
 
     &:hover::after {
       transform: scale(1);
-      background-color: $white-main-color;
     }
   }
+
+  &--footer {
+      padding-inline: 0;
+    }
+
+    &--menu{
+      padding-inline: 0;
+    }
 }

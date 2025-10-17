@@ -4,9 +4,7 @@
   background-color: $dark-main-color;
   overflow: auto;
 
-  &__content {
-    // padding-inline: 20px;
-  }
+  @include content-padding-inline;
 
   &__top {
     padding-top: 20px;

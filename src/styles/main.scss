@@ -5,9 +5,18 @@
 @import './button/button';
 @import './page/page';
 @import './main/main-content';
+@import './footer/footer';
+@import './form/form';
+@import './contacts/contacts';
 
 
 body {
   margin: 0;
   background: $c-gray;
+}
+
+.page {
+  &:has(.page__menu:target) {
+    overflow: hidden;
+  }
 }

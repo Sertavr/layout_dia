@@ -1,8 +1,26 @@
 .testimonials {
+  padding-bottom: 120px;
+
   @include page-grid;
   @include content-padding-inline;
+  
+  @include on-tablet {
+    padding-bottom: 148px;
+  }
 
-  &__block-title{
+  @include on-small-desktop {
+    padding-bottom: 186px;
+  }
+
+  @include on-small-desktop {
+    padding-bottom: 186px;
+  }
+
+  @include on-design {
+    padding-bottom: 148px;
+  }
+
+  &__block-title {
     grid-column: 1 / span 2;
 
     @include on-tablet {
@@ -21,7 +39,6 @@
     letter-spacing: 0;
     vertical-align: middle;
     margin-bottom: 48px;
-
 
     @include on-tablet {
       margin-bottom: 56px;
@@ -73,6 +90,8 @@
     padding-block: 32px;
     padding-inline: 42px;
 
+    @include hover(box-shadow, 0 1px 18px 4px rgba(44, 44, 44, 0.64));
+
     @include on-tablet {
       padding-inline: 98px;
     }
@@ -93,6 +112,8 @@
     z-index: 0;
     margin-top: 43px;
     border-radius: 50%;
+
+    @include hover(transform, scale(1.2));
 
     @include on-tablet {
       width: 140px;
@@ -182,7 +203,7 @@
   &__quote {
     width: 100%;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 13px;
     line-height: 150%;
@@ -194,7 +215,7 @@
   &__name {
     margin: 0;
     margin-top: 32px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 13px;
     line-height: 150%;

@@ -1,34 +1,33 @@
 .our-expertise {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-block: 72px;
   background-color: $white-main-color;
   border-radius: 30px;
-  padding-inline: 20px;
+
+  @include page-grid;
+  @include content-padding-inline;
 
   @include on-tablet {
     padding-block: 128px;
-    padding-inline: 139px;
-  }
-
-  @include on-small-desktop {
-    padding-inline: 54px;
-  }
-
-  @include on-desktop {
-    padding-inline: 227px;
-  }
-
-  @include on-large-screens {
-    padding-inline: 705px;
   }
 
   &__title {
     margin-bottom: 56px;
+    grid-column: 1 / span 2;
 
     @include on-tablet {
       margin-bottom: 64px;
+      grid-column: 2 / span 4;
+    }
+
+    @include on-small-desktop {
+      grid-column: 4 / span 6;
+    }
+
+    // @include on-desktop {
+    //   grid-column: 4 / span 6;
+    // }
+
+    @include on-design {
+      grid-column: 5 / span 4;
     }
   }
 
@@ -38,14 +37,18 @@
     flex-direction: column;
     align-items: center;
     gap: 56px;
+    grid-column: 1 / span 2;
+
+    @include on-tablet {
+      grid-column: 3 / span 2;
+    }
 
     @include on-small-desktop {
       flex-direction: row;
-      gap: 137px;
+      grid-column: 1 / -1;
     }
 
     @include on-large-screens {
-      width: 1146px;
       gap: 177px;
     }
   }
@@ -55,12 +58,16 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
   }
 
   &__image {
     width: 166px;
     height: 166px;
     border-radius: 16px;
+
+    @include hover(transform , scale(1.05));
+    @include hover(box-shadow, 0 1px 18px 4px rgba(44, 44, 44, 0.64));
 
     &--branding {
       background-image: url(../images/our-expertise-1.png);
@@ -93,7 +100,7 @@
 
   &__paragraph {
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
