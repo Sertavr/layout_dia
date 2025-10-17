@@ -1,29 +1,29 @@
 'use strict';
 
-
-
-const slide = document.querySelector('.slider__image-container');
+const slides = document.querySelectorAll('.slider__image-container');
 const arrowLeft = document.querySelector('.slider__arrow--left');
 const arrowRight = document.querySelector('.slider__arrow--right');
-console.log(arrowLeft);
-const images = [`url(${photo1})`, `url(${photo2})`, `url(${photo3})`];
 let currentSlid = 0;
 
-console.log(photo1);
 
-slide.style.backgroundImage = 'url(./communicatuin-2.png)';
-function updateBackground() {
-  slide.style.backgroundImage = images[currentSlid];
-}
+
+const goToSlide = (slide) => {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`),
+  );
+};
+
+goToSlide(0);
+
 
 function nextSlide() {
-  currentSlid = (currentSlid + 1) % images.length;
-  updateBackground();
+  currentSlid = (currentSlid + 1) % slides.length;
+  goToSlide(currentSlid);
 }
 
 function prevSlide() {
-  currentSlid = (currentSlid - 1 + images.length) % images.length;
-  updateBackground();
+  currentSlid = (currentSlid - 1 + slides.length) % slides.length;
+  goToSlide(currentSlid);
 }
 
 arrowLeft.addEventListener('click', prevSlide);
