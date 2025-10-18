@@ -1,0 +1,2 @@
+const e=document.querySelectorAll(".slider__image-container"),t=document.querySelector(".slider__arrow--left"),r=document.querySelector(".slider__arrow--right");let n=0;const l=t=>{e.forEach((e,r)=>e.style.transform=`translateX(${100*(r-t)}%)`)};l(0),t.addEventListener("click",function(){l(n=(n-1+e.length)%e.length)}),r.addEventListener("click",function(){l(n=(n+1)%e.length)});
+//# sourceMappingURL=layout_dia.f4f55f71.js.map
